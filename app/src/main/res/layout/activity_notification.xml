@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Strock"
+    android:orientation="vertical"
+    tools:context=".activity_notification">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="40dp"
+                android:text="Notification"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="All the Notefication"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Notefication"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_Notf"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="-6dp"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Low Glucose Alerts"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Low"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_Low"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-6dp"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Always Sound"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sound_low"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="183dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Sound Modes"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/arrow_forward"
+                android:layout_marginStart="220dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="-150dp"
+                android:text="Vaibration Modes"
+                android:textColor="@color/Blak"
+                android:layout_marginTop="3dp"
+                android:textStyle="normal"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Urgent Low"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="4dp"
+                android:text="67 mg/dl"
+                android:textColor="@color/Blak"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Fall Rate"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_Fall"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="High Glucose Alerts"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="High"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_High"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Always Sound"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sound_high"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="185dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Sound Modes"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/arrow_forward"
+                android:layout_marginStart="220dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="-140dp"
+                android:layout_marginTop="4dp"
+                android:text="Vairabtion Modes"
+                android:textColor="@color/Blak"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Urgent High"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="4dp"
+                android:text="200 mg/dl"
+                android:textColor="@color/Blak"
+                android:textStyle="normal"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Rise Rate"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_Rise"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="230dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Predection Glucose Alerts"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Predection"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_predection"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="215dp"
+                android:layout_marginTop="-6dp"
+
+                />
+
+        </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="60dp"
+             android:background="@drawable/strok"
+             android:orientation="horizontal"
+             android:padding="16dp"
+             android:layout_marginTop="15dp"
+             android:layout_marginStart="8dp"
+             android:layout_marginEnd="8dp"
+             tools:layout_editor_absoluteX="45dp"
+             tools:layout_editor_absoluteY="156dp">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="30dp"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginStart="8dp"
+                 android:text="Always sound"
+                 android:textColor="@color/black"
+                 android:textStyle="normal"
+                 android:textSize="20dp"/>
+
+             <androidx.appcompat.widget.SwitchCompat
+                 android:id="@+id/sound_predc"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:layout_marginStart="190dp"
+                 android:layout_marginTop="-6dp"
+
+                 />
+
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="60dp"
+             android:background="@drawable/strok"
+             android:orientation="horizontal"
+             android:padding="16dp"
+             android:layout_marginTop="15dp"
+             android:layout_marginStart="8dp"
+             android:layout_marginEnd="8dp"
+             tools:layout_editor_absoluteX="45dp"
+             tools:layout_editor_absoluteY="156dp">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="30dp"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginStart="8dp"
+                 android:text="Sound Modes"
+                 android:textColor="@color/black"
+                 android:textStyle="normal"
+                 android:textSize="20dp"/>
+
+             <TextView
+                 android:layout_width="150dp"
+                 android:layout_height="30dp"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginStart="85dp"
+                 android:text="Vaibration Modes"
+                 android:textColor="@color/Blak"
+                 android:layout_marginTop="3dp"
+                 android:textStyle="normal"
+                 android:textSize="16sp"/>
+             <ImageView
+                 android:layout_width="14dp"
+                 android:layout_height="14dp"
+                 android:src="@drawable/arrow_forward"
+                 android:layout_marginStart="-20dp"
+                 android:layout_gravity="center_vertical"
+                 />
+
+         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Remainder Alerts"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Remainder"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_Remaind"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="218dp"
+                android:layout_marginTop="-6dp"
+
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Always sound"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sound_Remaind"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="-6dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Sound Modes"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="85dp"
+                android:text="Vaibration Modes"
+                android:textColor="@color/Blak"
+                android:layout_marginTop="3dp"
+                android:textStyle="normal"
+                android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/arrow_forward"
+                android:layout_marginStart="-20dp"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Schedule Alerts"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/strok"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="156dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Schedule "
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:text="Min"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:layout_marginStart="230dp"
+                android:textSize="18sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</ScrollView>
