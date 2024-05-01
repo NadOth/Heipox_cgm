@@ -1,52 +1,104 @@
 package com.example.myapplicationheipox;
 
+import android.widget.Toast;
 import androidx.appcompat.widget.SwitchCompat;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
 import androidx.core.content.ContextCompat;
 import android.graphics.PorterDuff;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.view.View;
+import android.content.SharedPreferences;
+import androidx.appcompat.widget.SwitchCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 
 public class activity_notification extends AppCompatActivity {
+
+    private EditText minutesEditText;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
 
+        // Initialize EditText and SharedPreferences
+        minutesEditText = findViewById(R.id.minutesEditText);
+        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+
+        // Load the previously saved minutes, defaulting to 0 if not found
+        int savedMinutes = sharedPreferences.getInt("minutes", 0);
+        minutesEditText.setText(String.valueOf(savedMinutes));
+
         // Find each SwitchCompat directly using its ID and apply color changes
         SwitchCompat switchAll = findViewById(R.id.switch_Notf);
         applyColorToSwitch(switchAll);
 
-        SwitchCompat switchLow1 = findViewById(R.id.switch_Low);
-        applyColorToSwitch(switchLow1);
+        SwitchCompat switchLow = findViewById(R.id.switch_Low);
+        applyColorToSwitch(switchLow);
 
-        SwitchCompat soundLow = findViewById(R.id.sound_low);
-        applyColorToSwitch(soundLow);
+        SwitchCompat switchSoundLow = findViewById(R.id.sound_low);
+        applyColorToSwitch(switchSoundLow);
 
-        SwitchCompat switchfall = findViewById(R.id.switch_Fall);
-        applyColorToSwitch(switchfall);
+        SwitchCompat switchSoundModes = findViewById(R.id.sound_high);
+        applyColorToSwitch(switchSoundModes);
 
-        SwitchCompat switchhigh = findViewById(R.id.switch_High);
-        applyColorToSwitch(switchhigh);
+        SwitchCompat switchFall = findViewById(R.id.switch_Fall);
+        applyColorToSwitch(switchFall);
 
-        SwitchCompat soundhigh = findViewById(R.id.sound_high);
-        applyColorToSwitch(soundhigh);
+        SwitchCompat switchHigh = findViewById(R.id.switch_High);
+        applyColorToSwitch(switchHigh);
 
-        SwitchCompat switchrise = findViewById(R.id.switch_Rise);
-        applyColorToSwitch(switchrise);
+        SwitchCompat switchSoundHigh = findViewById(R.id.sound_high);
+        applyColorToSwitch(switchSoundHigh);
 
-        SwitchCompat switchpredection = findViewById(R.id.switch_predection);
-        applyColorToSwitch(switchpredection);
+        SwitchCompat switchRise = findViewById(R.id.switch_Rise);
+        applyColorToSwitch(switchRise);
 
-        SwitchCompat soundpredct = findViewById(R.id.sound_predc);
-        applyColorToSwitch(soundpredct);
+        SwitchCompat switchPredection = findViewById(R.id.switch_predection);
+        applyColorToSwitch(switchPredection);
 
-        SwitchCompat switchremaind = findViewById(R.id.switch_Remaind);
-        applyColorToSwitch(switchremaind);
+        SwitchCompat switchSoundPredection = findViewById(R.id.sound_predc);
+        applyColorToSwitch(switchSoundPredection);
 
-        SwitchCompat soundremaind = findViewById(R.id.sound_Remaind);
-        applyColorToSwitch(soundremaind);
+        SwitchCompat switchRemainder = findViewById(R.id.switch_Remaind);
+        applyColorToSwitch(switchRemainder);
+
+        SwitchCompat switchSoundRemainder = findViewById(R.id.sound_Remaind);
+        applyColorToSwitch(switchSoundRemainder);
+
+        minutesEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Not needed for this implementation
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Not needed for this implementation
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Check if the entered value is valid
+                String minutesStr = minutesEditText.getText().toString();
+                if (!minutesStr.isEmpty()) {
+                    int minutes = Integer.parseInt(minutesStr);
+                    if (minutes < 1 || minutes > 60) {
+                        minutesEditText.setError("Minutes should be between 1 and 60");
+                    } else {
+                        // Clear any previous error
+                        minutesEditText.setError(null);
+                    }
+                } else {
+                    // Clear any previous error
+                    minutesEditText.setError(null);
+                }
+            }
+        });
     }
 
     private void applyColorToSwitch(SwitchCompat switchCompat) {
@@ -57,7 +109,28 @@ public class activity_notification extends AppCompatActivity {
 
         // Change track color
         Drawable trackDrawable = switchCompat.getTrackDrawable();
-        trackDrawable.setColorFilter(ContextCompat.getColor(this, R.color.blue_primary), PorterDuff.Mode.MULTIPLY);
+        trackDrawable.setColorFilter(ContextCompat.getColor(this, R.color.Gray_icon), PorterDuff.Mode.MULTIPLY);
         switchCompat.setTrackDrawable(trackDrawable);
+
+        // Change checked track color
+        switchCompat.setTrackTintList(ContextCompat.getColorStateList(this, R.color.blue_primary));
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        String minutesStr = minutesEditText.getText().toString();
+
+        int minutes = Integer.parseInt(minutesStr);
+
+        if (minutes >= 1 && minutes <= 60) {
+            SharedPreferences.Editor editor = getSharedPreferences("MyPrefs", MODE_PRIVATE).edit();
+            editor.putInt("minutes", minutes);
+            editor.apply();
+        } else {
+
+            Toast.makeText(this, "Please enter a number between 1 and 60 for minutes.", Toast.LENGTH_SHORT).show();
+        }
     }
 }

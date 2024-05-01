@@ -57,7 +57,8 @@
             android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/baseline_lock_24_click" />
+            android:src="@drawable/outline_lock_24"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -96,7 +97,7 @@
             android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/baseline_email_24"
+            android:src="@drawable/costum_email_icon"
             />
 
         <TextView
@@ -143,7 +144,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
-            android:text="Avrege"
+            android:text="Blood Glucose Target"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -151,7 +152,7 @@
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="280dp"
+            android:layout_marginStart="180dp"
             android:src="@drawable/arrow_forward"
             />
 
@@ -175,7 +176,7 @@
             android:layout_height="16dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/img_1" />
+            android:src="@drawable/outline_water_drop_24_bloodicon" />
 
         <TextView
             android:layout_width="wrap_content"

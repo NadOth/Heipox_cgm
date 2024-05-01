@@ -28,7 +28,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/profile" />
+                android:src="@drawable/icon_profile_user" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,11 +92,11 @@
         android:orientation="horizontal"
         android:padding="16dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/settinicon"/>
+            android:src="@drawable/outline_settings_24"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,11 +125,11 @@
         android:orientation="horizontal"
         android:padding="16dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/sharing"/>
+            android:src="@drawable/outline_share_24"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -163,11 +163,11 @@
         android:orientation="horizontal"
         android:padding="16dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/img"/>
+            android:src="@drawable/outline_notifications_24"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,11 +196,11 @@
         android:orientation="horizontal"
         android:padding="16dp">
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="3dp"
-            android:src="@drawable/dowland"/>
+            android:src="@drawable/outline_file_download_24"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
